@@ -10,7 +10,7 @@
     },
     "otherContributors" : [ "Bjørn Næss<bna@dips.no>" ],
     "lifecycleState" : {
-      "codeString" : "release_candidate"
+      "codeString" : "rejected"
     },
     "ipAcknowledgements" : { },
     "references" : { },
@@ -314,7 +314,7 @@
     "valueSets" : { }
   },
   "adlVersion" : "1.4",
-  "buildUid" : "09242fd5-2732-3004-81b5-2db228f6c33c",
+  "buildUid" : "951cef15-8e8d-375d-bc60-08b776830d47",
   "rmName" : "openehr",
   "rmRelease" : "1.1.0",
   "generated" : true,
