@@ -21,9 +21,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "9610cd52fb781da2f87df83df4ad8a15",
+      "MD5-CAM-1.0.1" : "d32b3c130ac755dd6f857192ffe49a90",
       "PARENT:MD5-CAM-1.0.1" : "69A2EB40181A0445C162591A2488CE2D",
-      "sem_ver" : "2.0.0",
+      "sem_ver" : "4.0.0",
       "build_uid" : "",
       "original_language" : "ISO_639-1::nb"
     },
@@ -105,7 +105,7 @@
           "rmAttributeName" : "events",
           "children" : [ {
             "@type" : "C_COMPLEX_OBJECT",
-            "rmTypeName" : "EVENT",
+            "rmTypeName" : "POINT_EVENT",
             "occurrences" : "0..1",
             "nodeId" : "at0002.1",
             "attributes" : [ {
@@ -128,29 +128,31 @@
                       "children" : [ {
                         "@type" : "C_COMPLEX_OBJECT",
                         "rmTypeName" : "DV_CODED_TEXT",
-                        "occurrences" : "0..1",
+                        "occurrences" : "1..1",
                         "defaultValue" : {
-                          "@type" : "DV_CODED_TEXT",
-                          "value" : "Kartlegging av om individet har omsorgsansvar",
                           "defining_code" : {
-                            "@type" : "CODE_PHRASE",
                             "terminology_id" : {
-                              "@type" : "TERMINOLOGY_ID",
-                              "value" : "no.onk.sosiale_forhold"
+                              "value" : "no.onk.sosiale_forhold",
+                              "@type" : "TERMINOLOGY_ID"
                             },
-                            "code_string" : "OA"
-                          }
+                            "code_string" : "OA",
+                            "@type" : "CODE_PHRASE"
+                          },
+                          "value" : "Kartlegging av om individet har omsorgsansvar",
+                          "@type" : "DV_CODED_TEXT"
                         },
                         "attributes" : [ {
                           "@type" : "C_ATTRIBUTE",
                           "rmAttributeName" : "defining_code",
-                          "existence" : "0..1",
                           "children" : [ {
                             "@type" : "C_TERMINOLOGY_CODE",
+                            "rmTypeName" : "TERMINOLOGY_CODE",
+                            "occurrences" : "0..1",
                             "terminologyId" : {
                               "value" : "no.onk.sosiale_forhold"
                             },
                             "constraint" : [ ],
+                            "selectedTerminologies" : [ "no.onk.sosiale_forhold" ],
                             "includedExternalTerminologyCodes" : [ {
                               "terminologyId" : "no.onk.sosiale_forhold",
                               "code" : "OA",
@@ -181,28 +183,29 @@
                             "@type" : "C_COMPLEX_OBJECT",
                             "rmTypeName" : "DV_CODED_TEXT",
                             "defaultValue" : {
-                              "@type" : "DV_CODED_TEXT",
-                              "value" : "Ansvarlig for barn under 18 år",
                               "defining_code" : {
-                                "@type" : "CODE_PHRASE",
                                 "terminology_id" : {
-                                  "@type" : "TERMINOLOGY_ID",
-                                  "value" : "no.onk.sosiale_forhold"
+                                  "value" : "no.onk.sosiale_forhold",
+                                  "@type" : "TERMINOLOGY_ID"
                                 },
-                                "code_string" : "U18"
-                              }
+                                "code_string" : "U18",
+                                "@type" : "CODE_PHRASE"
+                              },
+                              "value" : "Ansvarlig for barn under 18 år",
+                              "@type" : "DV_CODED_TEXT"
                             },
                             "attributes" : [ {
                               "@type" : "C_ATTRIBUTE",
                               "rmAttributeName" : "defining_code",
                               "children" : [ {
                                 "@type" : "C_TERMINOLOGY_CODE",
-                                "rmTypeName" : "CODE_PHRASE",
+                                "rmTypeName" : "TERMINOLOGY_CODE",
                                 "occurrences" : "1..1",
                                 "terminologyId" : {
                                   "value" : "no.onk.sosiale_forhold"
                                 },
-                                "constraint" : [ "at0048", "at0049" ],
+                                "constraint" : [ ],
+                                "selectedTerminologies" : [ "no.onk.sosiale_forhold" ],
                                 "includedExternalTerminologyCodes" : [ {
                                   "terminologyId" : "no.onk.sosiale_forhold",
                                   "code" : "U18",
@@ -229,12 +232,13 @@
                               "rmAttributeName" : "defining_code",
                               "children" : [ {
                                 "@type" : "C_TERMINOLOGY_CODE",
-                                "rmTypeName" : "CODE_PHRASE",
+                                "rmTypeName" : "TERMINOLOGY_CODE",
                                 "occurrences" : "1..1",
                                 "terminologyId" : {
                                   "value" : "local"
                                 },
-                                "constraint" : [ "at0023", "at0024", "at0027" ]
+                                "constraint" : [ "ac0.14" ],
+                                "selectedTerminologies" : [ ]
                               } ]
                             } ],
                             "attributeTuples" : [ ]
@@ -246,6 +250,84 @@
                         "rmTypeName" : "ELEMENT",
                         "occurrences" : "0..0",
                         "nodeId" : "at0025.1",
+                        "attributes" : [ ],
+                        "attributeTuples" : [ ]
+                      } ]
+                    } ],
+                    "attributeTuples" : [ ]
+                  }, {
+                    "@type" : "C_COMPLEX_OBJECT",
+                    "rmTypeName" : "CLUSTER",
+                    "occurrences" : "0..1",
+                    "nodeId" : "at0022.3",
+                    "attributes" : [ {
+                      "@type" : "C_ATTRIBUTE",
+                      "rmAttributeName" : "items",
+                      "children" : [ {
+                        "@type" : "C_COMPLEX_OBJECT",
+                        "rmTypeName" : "ELEMENT",
+                        "nodeId" : "at0004.3",
+                        "attributes" : [ {
+                          "@type" : "C_ATTRIBUTE",
+                          "rmAttributeName" : "value",
+                          "children" : [ {
+                            "@type" : "C_COMPLEX_OBJECT",
+                            "rmTypeName" : "DV_CODED_TEXT",
+                            "attributes" : [ {
+                              "@type" : "C_ATTRIBUTE",
+                              "rmAttributeName" : "defining_code",
+                              "children" : [ {
+                                "@type" : "C_TERMINOLOGY_CODE",
+                                "rmTypeName" : "TERMINOLOGY_CODE",
+                                "occurrences" : "1..1",
+                                "terminologyId" : {
+                                  "value" : "no.onk.sosiale_forhold"
+                                },
+                                "constraint" : [ ],
+                                "selectedTerminologies" : [ "no.onk.sosiale_forhold" ],
+                                "includedExternalTerminologyCodes" : [ {
+                                  "terminologyId" : "no.onk.sosiale_forhold",
+                                  "code" : "BPU18",
+                                  "value" : "Barn som pårørende"
+                                } ]
+                              } ]
+                            } ],
+                            "attributeTuples" : [ ]
+                          } ]
+                        } ],
+                        "attributeTuples" : [ ]
+                      }, {
+                        "@type" : "C_COMPLEX_OBJECT",
+                        "rmTypeName" : "ELEMENT",
+                        "nodeId" : "at0005.3",
+                        "attributes" : [ {
+                          "@type" : "C_ATTRIBUTE",
+                          "rmAttributeName" : "value",
+                          "children" : [ {
+                            "@type" : "C_COMPLEX_OBJECT",
+                            "rmTypeName" : "DV_CODED_TEXT",
+                            "attributes" : [ {
+                              "@type" : "C_ATTRIBUTE",
+                              "rmAttributeName" : "defining_code",
+                              "children" : [ {
+                                "@type" : "C_TERMINOLOGY_CODE",
+                                "rmTypeName" : "TERMINOLOGY_CODE",
+                                "occurrences" : "1..1",
+                                "terminologyId" : {
+                                  "value" : "local"
+                                },
+                                "constraint" : [ "ac0.15" ],
+                                "selectedTerminologies" : [ ]
+                              } ]
+                            } ],
+                            "attributeTuples" : [ ]
+                          } ]
+                        } ],
+                        "attributeTuples" : [ ]
+                      }, {
+                        "@type" : "C_COMPLEX_OBJECT",
+                        "rmTypeName" : "ELEMENT",
+                        "nodeId" : "at0025.3",
                         "attributes" : [ ],
                         "attributeTuples" : [ ]
                       } ]
@@ -270,28 +352,29 @@
                             "@type" : "C_COMPLEX_OBJECT",
                             "rmTypeName" : "DV_CODED_TEXT",
                             "defaultValue" : {
-                              "@type" : "DV_CODED_TEXT",
-                              "value" : "Ansvarlig for barn/andre over 18 år",
                               "defining_code" : {
-                                "@type" : "CODE_PHRASE",
                                 "terminology_id" : {
-                                  "@type" : "TERMINOLOGY_ID",
-                                  "value" : "no.onk.sosiale_forhold"
+                                  "value" : "no.onk.sosiale_forhold",
+                                  "@type" : "TERMINOLOGY_ID"
                                 },
-                                "code_string" : "O18"
-                              }
+                                "code_string" : "O18",
+                                "@type" : "CODE_PHRASE"
+                              },
+                              "value" : "Ansvarlig for barn/andre over 18 år",
+                              "@type" : "DV_CODED_TEXT"
                             },
                             "attributes" : [ {
                               "@type" : "C_ATTRIBUTE",
                               "rmAttributeName" : "defining_code",
                               "children" : [ {
                                 "@type" : "C_TERMINOLOGY_CODE",
-                                "rmTypeName" : "CODE_PHRASE",
+                                "rmTypeName" : "TERMINOLOGY_CODE",
                                 "occurrences" : "1..1",
                                 "terminologyId" : {
                                   "value" : "no.onk.sosiale_forhold"
                                 },
-                                "constraint" : [ "at0048", "at0049" ],
+                                "constraint" : [ ],
+                                "selectedTerminologies" : [ "no.onk.sosiale_forhold" ],
                                 "includedExternalTerminologyCodes" : [ {
                                   "terminologyId" : "no.onk.sosiale_forhold",
                                   "code" : "O18",
@@ -318,12 +401,13 @@
                               "rmAttributeName" : "defining_code",
                               "children" : [ {
                                 "@type" : "C_TERMINOLOGY_CODE",
-                                "rmTypeName" : "CODE_PHRASE",
+                                "rmTypeName" : "TERMINOLOGY_CODE",
                                 "occurrences" : "1..1",
                                 "terminologyId" : {
                                   "value" : "local"
                                 },
-                                "constraint" : [ "at0023", "at0024", "at0027" ]
+                                "constraint" : [ "ac0.16" ],
+                                "selectedTerminologies" : [ ]
                               } ]
                             } ],
                             "attributeTuples" : [ ]
@@ -389,6 +473,37 @@
           "text" : "Har pasienten ansvar for egne barn/andre over 18 år?",
           "description" : "Has there been experience of the specified 'Context'?",
           "comment" : "In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case."
+        },
+        "at0022.3" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0022.1",
+          "text" : "Omsorgsperson for barn under 18 år (2)",
+          "description" : "Details about a specified social context or issue, or a grouping of these, relevant for the screening purpose."
+        },
+        "at0005.3" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0005.1",
+          "text" : "Har pasienten ansvar for barn under 18 år?",
+          "description" : "Has there been experience of the specified 'Context'?",
+          "comment" : "In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case."
+        },
+        "ac0.14" : {
+          "@type" : "ARCHETYPE_TERM",
+          "text" : "(Synthesized)",
+          "code" : "ac0.14",
+          "description" : ""
+        },
+        "ac0.15" : {
+          "@type" : "ARCHETYPE_TERM",
+          "text" : "(Synthesized)",
+          "code" : "ac0.15",
+          "description" : ""
+        },
+        "ac0.16" : {
+          "@type" : "ARCHETYPE_TERM",
+          "text" : "(Synthesized)",
+          "code" : "ac0.16",
+          "description" : ""
         }
       },
       "fi" : {
@@ -423,6 +538,37 @@
           "text" : "Har pasienten ansvar for egne barn/andre over 18 år?",
           "description" : "*Has there been experience of the specified 'Context'? (en)",
           "comment" : "*In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case. (en)"
+        },
+        "at0022.3" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0022.1",
+          "text" : "Omsorgsperson for barn under 18 år (2)",
+          "description" : "*Details about a specified social context or issue, or a grouping of these, relevant for the screening purpose. (en)"
+        },
+        "at0005.3" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0005.1",
+          "text" : "Har pasienten ansvar for barn under 18 år?",
+          "description" : "*Has there been experience of the specified 'Context'? (en)",
+          "comment" : "*In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case. (en)"
+        },
+        "ac0.14" : {
+          "@type" : "ARCHETYPE_TERM",
+          "text" : "*(Synthesized) (en)",
+          "code" : "ac0.14",
+          "description" : ""
+        },
+        "ac0.15" : {
+          "@type" : "ARCHETYPE_TERM",
+          "text" : "*(Synthesized) (en)",
+          "code" : "ac0.15",
+          "description" : ""
+        },
+        "ac0.16" : {
+          "@type" : "ARCHETYPE_TERM",
+          "text" : "*(Synthesized) (en)",
+          "code" : "ac0.16",
+          "description" : ""
         }
       },
       "nb" : {
@@ -442,8 +588,7 @@
           "@type" : "ARCHETYPE_TERM",
           "code" : "at0005.1",
           "text" : "Har pasienten ansvar for barn under 18 år?",
-          "description" : "Har individet hatt noen erfaring med det spesifiserte \"Sosialt forhold\"?",
-          "comment" : "I templat vil navnet på dataelementet normalt omformuleres til det spesifikke spørsmålet. Det foreslåtte verdisettet kan tilpasses/endres i det enkelte bruksområde ved å benytte de alternative datatypene DV_TEXT eller DV_BOOLEAN."
+          "description" : "Har individet hatt noen erfaring med det spesifiserte \"Sosialt forhold\"?"
         },
         "at0022.2" : {
           "@type" : "ARCHETYPE_TERM",
@@ -455,8 +600,65 @@
           "@type" : "ARCHETYPE_TERM",
           "code" : "at0005.2",
           "text" : "Har pasienten ansvar for egne barn/andre over 18 år?",
-          "description" : "Har individet hatt noen erfaring med det spesifiserte \"Sosialt forhold\"?",
-          "comment" : "I templat vil navnet på dataelementet normalt omformuleres til det spesifikke spørsmålet. Det foreslåtte verdisettet kan tilpasses/endres i det enkelte bruksområde ved å benytte de alternative datatypene DV_TEXT eller DV_BOOLEAN."
+          "description" : "Har individet hatt noen erfaring med det spesifiserte \"Sosialt forhold\"?"
+        },
+        "at0022.3" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0022.3",
+          "text" : "Barn som pårørende",
+          "description" : "Detaljer om et spesifikt sosialt forhold, eller en gruppering av slike, som er innenfor kartleggingsformålet."
+        },
+        "at0005.3" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0005.3",
+          "text" : "Finnes det barn som pårørende?",
+          "description" : "Har individet hatt noen erfaring med det spesifiserte \"Sosialt forhold\"?"
+        },
+        "at0004.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0004",
+          "text" : "Sosialt forhold",
+          "description" : "Navngiving av et spesifikt sosialt forhold.",
+          "comment" : "Navngiving av et spesifikt sosialt forhold."
+        },
+        "at0004.2" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0004",
+          "text" : "Sosialt forhold",
+          "description" : "Navngiving av et spesifikt sosialt forhold, problem eller bekymring som er relevant for spørreskjemaet, eller en gruppering av slike.",
+          "comment" : "Navngiving av et spesifikt sosialt forhold."
+        },
+        "at0004.3" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0004",
+          "text" : "Sosialt forhold",
+          "description" : "Navngiving av et spesifikt sosialt forhold, problem eller bekymring som er relevant for spørreskjemaet, eller en gruppering av slike.",
+          "comment" : "Navngiving av et spesifikt sosialt forhold."
+        },
+        "at0034.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0034",
+          "text" : "Kartleggingsformål",
+          "description" : "Konteksten eller årsaken for kartleggingen.",
+          "comment" : "I prosjektet strukturert kreftjournal er det etablert et eget kodeverk for kartleggingsformål. no.onk.sosiale_forhold."
+        },
+        "ac0.14" : {
+          "@type" : "ARCHETYPE_TERM",
+          "text" : "*(Synthesized) (en)",
+          "code" : "ac0.14",
+          "description" : ""
+        },
+        "ac0.15" : {
+          "@type" : "ARCHETYPE_TERM",
+          "text" : "*(Synthesized) (en)",
+          "code" : "ac0.15",
+          "description" : ""
+        },
+        "ac0.16" : {
+          "@type" : "ARCHETYPE_TERM",
+          "text" : "*(Synthesized) (en)",
+          "code" : "ac0.16",
+          "description" : ""
         }
       },
       "it" : {
@@ -491,12 +693,124 @@
           "text" : "Har pasienten ansvar for egne barn/andre over 18 år?",
           "description" : "*Has there been experience of the specified 'Context'? (en)",
           "comment" : "*In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case. (en)"
+        },
+        "at0022.3" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0022.1",
+          "text" : "Omsorgsperson for barn under 18 år (2)",
+          "description" : "*Details about a specified social context or issue, or a grouping of these, relevant for the screening purpose. (en)"
+        },
+        "at0005.3" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0005.1",
+          "text" : "Har pasienten ansvar for barn under 18 år?",
+          "description" : "*Has there been experience of the specified 'Context'? (en)",
+          "comment" : "*In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case. (en)"
+        },
+        "ac0.14" : {
+          "@type" : "ARCHETYPE_TERM",
+          "text" : "*(Synthesized) (en)",
+          "code" : "ac0.14",
+          "description" : ""
+        },
+        "ac0.15" : {
+          "@type" : "ARCHETYPE_TERM",
+          "text" : "*(Synthesized) (en)",
+          "code" : "ac0.15",
+          "description" : ""
+        },
+        "ac0.16" : {
+          "@type" : "ARCHETYPE_TERM",
+          "text" : "*(Synthesized) (en)",
+          "code" : "ac0.16",
+          "description" : ""
         }
       }
     },
     "termBindings" : { },
     "terminologyExtracts" : { },
-    "valueSets" : { }
+    "valueSets" : {
+      "ac0.1" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.1",
+        "members" : [ "at0023", "at0024", "at0027" ]
+      },
+      "ac0.2" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.2",
+        "members" : [ "at0023", "at0024", "at0027" ]
+      },
+      "ac0.3" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.3",
+        "members" : [ "at0023", "at0024", "at0027" ]
+      },
+      "ac0.4" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.4",
+        "members" : [ "at0023", "at0024", "at0027" ]
+      },
+      "ac0.5" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.5",
+        "members" : [ "at0023", "at0024", "at0027" ]
+      },
+      "ac0.6" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.6",
+        "members" : [ "at0023", "at0024", "at0027" ]
+      },
+      "ac0.7" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.7",
+        "members" : [ "at0023", "at0024", "at0027" ]
+      },
+      "ac0.8" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.8",
+        "members" : [ "at0023", "at0024", "at0027" ]
+      },
+      "ac0.9" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.9",
+        "members" : [ "at0023", "at0024", "at0027" ]
+      },
+      "ac0.10" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.10",
+        "members" : [ "at0023", "at0024", "at0027" ]
+      },
+      "ac0.11" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.11",
+        "members" : [ "at0023", "at0024", "at0027" ]
+      },
+      "ac0.12" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.12",
+        "members" : [ "at0023", "at0024", "at0027" ]
+      },
+      "ac0.13" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.13",
+        "members" : [ "at0023", "at0024", "at0027" ]
+      },
+      "ac0.14" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.14",
+        "members" : [ "at0023", "at0024", "at0027" ]
+      },
+      "ac0.15" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.15",
+        "members" : [ "at0023", "at0024", "at0027" ]
+      },
+      "ac0.16" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.16",
+        "members" : [ "at0023", "at0024", "at0027" ]
+      }
+    }
   },
   "adlVersion" : "1.4",
   "buildUid" : "3cbb778c-7c1e-392d-b72f-14995d51bb52",
@@ -531,9 +845,9 @@
       "codeString" : "nb"
     },
     "author" : {
-      "name" : "Marit Alice Venheim, John Tore Valand, Vebjørn Arntzen",
-      "organisation" : "Helse Vest IKT AS, Helse Bergen, Oslo University Hospital",
-      "email" : "marit.alice.venheim@helse-vest-ikt.no, john.tore.valand@helse-bergen.no, varntzen@ous-hf.no, john.tore.valand@helse-vest-ikt.no"
+      "name" : "Marit Alice Venheim, John Tore Valand, Vebjørn Arntzen, Liv Laugen",
+      "organisation" : "Helse Vest IKT AS, Helse Bergen, Oslo University Hospital, ​Oslo University Hospital, Norway",
+      "email" : "marit.alice.venheim@helse-vest-ikt.no, john.tore.valand@helse-bergen.no, varntzen@ous-hf.no, john.tore.valand@helse-vest-ikt.no, liv.laugen@ous-hf.no"
     },
     "otherDetails" : { }
   }, {
