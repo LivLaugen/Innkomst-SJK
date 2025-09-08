@@ -24,8 +24,8 @@
       "custodian_namespace" : "",
       "sem_ver" : "31.0.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "52cbf8e3a53566a55b46f5f9518bec08",
-      "PARENT:MD5-CAM-1.0.1" : "6AFDF4A34EB96917079AC64DB5F65463"
+      "MD5-CAM-1.0.1" : "68c7cad5bdb1bb624a9def7bd7bc63ab",
+      "PARENT:MD5-CAM-1.0.1" : "6562F732112B8B3F94790E178F4243A5"
     },
     "details" : {
       "es-ar" : {
@@ -352,7 +352,7 @@
               }, {
                 "@type" : "C_ARCHETYPE_ROOT",
                 "rmTypeName" : "CLUSTER",
-                "occurrences" : "0..1",
+                "occurrences" : "0..0",
                 "nodeId" : "at0002.10",
                 "attributes" : [ ],
                 "attributeTuples" : [ ],
@@ -2244,7 +2244,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "0DC26E43DE454A2B3FE00A7AEA553E2A"
+        "PARENT:MD5-CAM-1.0.1" : "5E574D6BBAB51E31A81716AD14B6781D"
       },
       "details" : {
         "nb" : {
@@ -11092,7 +11092,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "8FE80F3E80C594AAF99D3BA540A53D73"
+        "PARENT:MD5-CAM-1.0.1" : "9D358EB1048EA1401802C3E1FDFB9A29"
       },
       "details" : {
         "de" : {
@@ -11579,7 +11579,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "0DC26E43DE454A2B3FE00A7AEA553E2A"
+        "PARENT:MD5-CAM-1.0.1" : "5E574D6BBAB51E31A81716AD14B6781D"
       },
       "details" : {
         "nb" : {
@@ -11836,7 +11836,7 @@
         "original_publisher" : "openEHR Foundation",
         "custodian_namespace" : "org.openehr",
         "MD5-CAM-1.0.1" : "5bf057949488d479dfadbfe476b75040",
-        "PARENT:MD5-CAM-1.0.1" : "8FE80F3E80C594AAF99D3BA540A53D73"
+        "PARENT:MD5-CAM-1.0.1" : "9D358EB1048EA1401802C3E1FDFB9A29"
       },
       "details" : {
         "de" : {
@@ -13019,7 +13019,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "0DC26E43DE454A2B3FE00A7AEA553E2A"
+        "PARENT:MD5-CAM-1.0.1" : "5E574D6BBAB51E31A81716AD14B6781D"
       },
       "details" : {
         "nb" : {
@@ -13519,7 +13519,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "0DC26E43DE454A2B3FE00A7AEA553E2A"
+        "PARENT:MD5-CAM-1.0.1" : "5E574D6BBAB51E31A81716AD14B6781D"
       },
       "details" : {
         "de" : {
@@ -13990,7 +13990,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "0DC26E43DE454A2B3FE00A7AEA553E2A"
+        "PARENT:MD5-CAM-1.0.1" : "5E574D6BBAB51E31A81716AD14B6781D"
       },
       "details" : {
         "de" : {
@@ -14548,7 +14548,7 @@
         "original_publisher" : "openEHR Foundation",
         "custodian_namespace" : "org.openehr",
         "MD5-CAM-1.0.1" : "5a36441e50e2681bf895552eceeb57ed",
-        "PARENT:MD5-CAM-1.0.1" : "8FE80F3E80C594AAF99D3BA540A53D73",
+        "PARENT:MD5-CAM-1.0.1" : "9D358EB1048EA1401802C3E1FDFB9A29",
         "sem_ver" : "2.0.0",
         "build_uid" : ""
       },
@@ -14916,7 +14916,7 @@
         "original_publisher" : "openEHR Foundation",
         "custodian_namespace" : "org.openehr",
         "MD5-CAM-1.0.1" : "5016692b62bad93d91acd14974650772",
-        "PARENT:MD5-CAM-1.0.1" : "D208D25865EF6A8590CAC3E4299A25F4",
+        "PARENT:MD5-CAM-1.0.1" : "942CF0FB3C54F2949348CF29B1DD1E2D",
         "sem_ver" : "1.0.0",
         "build_uid" : "",
         "ip_acknowledgements" : "This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org."
@@ -16092,7 +16092,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "0DC26E43DE454A2B3FE00A7AEA553E2A"
+        "PARENT:MD5-CAM-1.0.1" : "5E574D6BBAB51E31A81716AD14B6781D"
       },
       "details" : {
         "de" : {
